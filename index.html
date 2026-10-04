@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Umair Riaz | Sr. Full Stack Developer</title>
-  <meta name="description" content="Portfolio of Umair Riaz - Sr. Full Stack Developer. WordPress, Shopify, Laravel, React, ASP.NET Core and Angular projects.">
-  <meta property="og:title" content="Umair Riaz | Sr. Full Stack Developer">
-  <meta property="og:description" content="I build powerful WordPress, Shopify, and custom websites designed to grow your business.">
+  <title>Your Name | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name - WordPress, Shopify, Laravel, React, ASP.NET Core and Angular projects.">
+  <meta property="og:title" content="Your Name | Full Stack Developer Portfolio">
+  <meta property="og:description" content="WordPress, Shopify, Laravel, React, ASP.NET Core and Angular projects.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?faQmily=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
 
-<!-- <header class="nav">
+<header class="nav">
   <div class="container nav-in">
-    <a class="logo" href="index.html"><span class="logo-mark">UR</span> Umair Riaz</a>
+    <a class="logo" href="index.html"><span class="logo-mark">&lt;/&gt;</span> YourName<span class="dot">.dev</span></a>
     <nav class="menu" aria-label="Main">
       <a href="#home">Home</a>
       <a href="#projects">Projects</a>
@@ -35,7 +35,7 @@
       <button class="burger icon-btn" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
-</header> -->
+</header>
 
 <main>
   <!-- HERO -->
@@ -43,33 +43,34 @@
     <div class="container hero-in">
       <div class="hero-text reveal">
         <span class="pill"><i class="pulse"></i> Available for new projects</span>
-        <h1>Hi, I'm <span class="grad">Umair Riaz</span><br>Sr. Full Stack Developer</h1>
-        <p class="lead">I build powerful WordPress, Shopify, and custom websites designed to grow your business. Below is a showcase of my work and skills.</p>
+        <h1>Hi, I'm <span class="grad">Your Name</span><br>Full Stack Developer</h1>
+        <p class="lead">Main WordPress, Shopify, Laravel, React, ASP.NET Core aur Angular par scalable, fast aur clean web applications banata hoon. Neeche mere kuch selected projects hain.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-ghost" href="https://forms.gle/Pw682LxrMdM8hzqy7" target="_blank" rel="noopener">Book free appointment</a>
+          <a class="btn btn-ghost" href="#contact">Contact Me</a>
         </div>
         <ul class="stats">
-          <li><b id="statProjects" data-count="39">39</b><span>Projects</span></li>
-          <li><b id="statTech" data-count="6">6</b><span>Technologies</span></li>
-          <li><b id="statYears" data-count="8" data-suffix="+">8+</b><span>Years Experience</span></li>
+          <li><b data-count="12" id="statProjects">12</b><span>Projects</span></li>
+          <li><b data-count="6" id="statTech">6</b><span>Technologies</span></li>
+          <li><b data-count="5" data-suffix="+">5+</b><span>Years Experience</span></li>
+          <li><b data-count="30" data-suffix="+">30+</b><span>Happy Clients</span></li>
         </ul>
       </div>
       <div class="hero-visual reveal">
         <div class="code-card">
           <div class="code-top"><i></i><i></i><i></i><span>developer.js</span></div>
 <pre><code><span class="c-k">const</span> developer = {
-  name: <span class="c-s">"Umair Riaz"</span>,
-  role: <span class="c-s">"Sr. Fullstack Developer"</span>,
-  stack: [<span class="c-s">"WordPress"</span>, <span class="c-s">"Shopify"</span>,
-          <span class="c-s">"Laravel"</span>, <span class="c-s">"React"</span>],
-  since: <span class="c-s">2018</span>,
+  name: <span class="c-s">"Your Name"</span>,
+  stack: [<span class="c-s">"Laravel"</span>, <span class="c-s">"ASP.NET Core"</span>,
+          <span class="c-s">"React"</span>, <span class="c-s">"Angular"</span>,
+          <span class="c-s">"WordPress"</span>, <span class="c-s">"Shopify"</span>],
+  passion: <span class="c-s">"Clean code &amp; great UX"</span>,
   hireable: <span class="c-k">true</span>
 };</code></pre>
         </div>
         <div class="float f1">Laravel</div>
         <div class="float f2">React</div>
-        <div class="float f3">WordPress</div>
+        <div class="float f3">.NET</div>
       </div>
     </div>
   </section>
@@ -80,7 +81,7 @@
       <div class="section-head reveal">
         <span class="eyebrow">Portfolio</span>
         <h2>Selected Projects</h2>
-        <p>Welcome to my portfolio. Technology ke mutabiq filter karein ya search karein, aur kisi bhi project par click kar ke detail dekhein.</p>
+        <p>Technology ke mutabiq filter karein ya search karein. Kisi bhi project par click kar ke poori detail dekhein.</p>
       </div>
       <div class="toolbar reveal">
         <div class="filters" id="filters" role="tablist" aria-label="Filter projects"></div>
@@ -91,7 +92,6 @@
       </div>
       <div class="grid" id="projectGrid"></div>
       <p class="empty" id="empty" hidden>Koi project nahi mila. Doosra filter ya keyword try karein.</p>
-      <div class="more-wrap"><button class="btn btn-ghost" id="loadMore" hidden>Show more projects</button></div>
     </div>
   </section>
 
@@ -100,7 +100,7 @@
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Tech Stack</span>
-        <h2>Services &amp; Technologies</h2>
+        <h2>Technologies I Work With</h2>
         <p>Kisi technology par click karein to uske projects filter ho jayenge.</p>
       </div>
       <div class="skill-grid" id="skillGrid"></div>
@@ -109,41 +109,21 @@
 
   <!-- ABOUT -->
   <section class="section" id="about">
-    <div class="container">
-      <div class="about">
-        <div class="about-img reveal">
-          <img src="assets/images/umair.jpeg" alt="Umair Riaz" width="360" height="360">
-        </div>
-        <div class="reveal">
-          <span class="eyebrow">About Me</span>
-          <h2>Umair Riaz - Sr. Fullstack Developer</h2>
-          <p>My name is Umair Riaz, and I am a passionate and experienced Full Stack Developer, with a career that began in 2018. I started my journey as a freelance WordPress developer, gradually evolving into a full-stack professional through hands-on experience with both startups and established organizations.</p>
-          <p>Over the years, I’ve built a strong foundation in WordPress development, working extensively on custom themes, plugins, and complete WooCommerce solutions. My expertise includes:</p>
-          <ul class="ticks">
-            <li>Custom plugin development &amp; theme customization</li>
-            <li>WooCommerce store development with tailored Add to Cart, Checkout, and Payment Gateway Integrations (PayPal, Stripe, and custom gateways)</li>
-            <li>Website speed optimization and security hardening</li>
-            <li>REST API development and third-party API integration in WordPress</li>
-          </ul>
-          <p>I’m a solution-driven developer who loves turning complex challenges into clean, scalable, and high-performance web applications tailored for real-world business needs.</p>
-        </div>
+    <div class="container about">
+      <div class="about-img reveal">
+        <img src="assets/images/avatar.svg" alt="Your Name" width="360" height="360">
       </div>
-
-      <div class="about-more reveal">
-        <h3>Full-Stack Development Expertise</h3>
-        <p>In addition to my extensive WordPress experience, I have hands-on experience in developing complete multi-vendor platforms with Laravel, implementing essential modules such as User, Admin, and Vendor authentication and authorization, along with comprehensive product, cart, coupon, and checkout management systems. Additionally, I’ve built and maintained campaign management features and wallet systems to support complex eCommerce operations.</p>
-        <p>On the frontend, I specialize in creating modern, responsive user interfaces using React.js combined with Redux Toolkit and Tailwind CSS. I also work proficiently with Vue.js, Bootstrap, jQuery, HTML5, and CSS3 to deliver seamless and user-friendly designs across different platforms and devices.</p>
-        <p>In the eCommerce space, I’ve built and customized Shopify stores from the ground up, including custom theme development and app integration. I also bring solid experience with Magento, delivering tailored solutions for scalable online stores.</p>
-        <p>My backend expertise includes PHP with Object-Oriented Programming (OOP), Laravel, and CodeIgniter, along with JavaScript-based stacks like Node.js and Express.js, enabling me to build full-stack solutions that are efficient, scalable, and secure.</p>
-
-        <h3 class="mt">Techstack</h3>
-        <dl class="stack-rows">
-          <div><dt>Frontend</dt><dd>HTML5, CSS3, JavaScript, jQuery, Bootstrap, Tailwind CSS, React.js, Vue.js</dd></div>
-          <div><dt>Backend</dt><dd>PHP (OOP), Laravel, CodeIgniter, Node.js, Express.js</dd></div>
-          <div><dt>CMS &amp; eCommerce</dt><dd>WordPress, WooCommerce, Shopify, Magento</dd></div>
-          <div><dt>Tools &amp; Skills</dt><dd>REST APIs, Redux Toolkit, Git, MySQL, API Integration &amp; Development, Payment Gateways</dd></div>
-        </dl>
-        <p>I am deeply committed to delivering high-quality, scalable, and performance-optimized web solutions that drive results. I thrive in collaborative environments and love turning ideas into powerful, user-centric digital experiences.</p>
+      <div class="reveal">
+        <span class="eyebrow">About Me</span>
+        <h2>Ideas ko working products mein badalta hoon</h2>
+        <p>Yahan apna introduction likhein. Aap kitne saal se kaam kar rahe hain, kin industries ke liye projects banaye, aur aap ki strengths kya hain.</p>
+        <p>Main backend (Laravel, ASP.NET Core) se le kar frontend (React, Angular) aur CMS/e-commerce (WordPress, Shopify) tak end-to-end solutions deta hoon.</p>
+        <ul class="ticks">
+          <li>Clean, maintainable code</li>
+          <li>Responsive aur performance-first design</li>
+          <li>Clear communication aur on-time delivery</li>
+        </ul>
+        <a class="btn btn-ghost" href="assets/cv.pdf" download>Download CV</a>
       </div>
     </div>
   </section>
@@ -154,15 +134,13 @@
       <div class="section-head reveal">
         <span class="eyebrow">Contact</span>
         <h2>Let's Work Together</h2>
-        <p>Koi project hai? Mujhe message karein ya free appointment book karein.</p>
+        <p>Koi project hai? Mujhe message karein, main jald jawab dunga.</p>
       </div>
       <div class="contact-grid reveal">
-        <a class="contact-card" href="mailto:lib.umair@gmail.com"><b>Email</b><span>lib.umair@gmail.com</span></a>
-        <a class="contact-card" href="tel:+923222566149"><b>Phone</b><span>+92-322-2566-149</span></a>
-        <a class="contact-card" href="https://api.whatsapp.com/send?phone=923222566149&amp;text=Hi%21%20Umair%20Riaz" target="_blank" rel="noopener"><b>WhatsApp</b><span>Chat with me</span></a>
-        <a class="contact-card" href="https://pk.linkedin.com/in/umair-riaz-79517215" target="_blank" rel="noopener"><b>LinkedIn</b><span>Umair Riaz</span></a>
-        <a class="contact-card" href="https://www.facebook.com/share/19BbJpGReW/" target="_blank" rel="noopener"><b>Facebook</b><span>Umair Riaz</span></a>
-        <a class="contact-card" href="https://forms.gle/Pw682LxrMdM8hzqy7" target="_blank" rel="noopener"><b>Book free appointment</b><span>Google Form</span></a>
+        <a class="contact-card" href="mailto:you@example.com"><b>Email</b><span>you@example.com</span></a>
+        <a class="contact-card" href="https://wa.me/920000000000" target="_blank" rel="noopener"><b>WhatsApp</b><span>+92 000 0000000</span></a>
+        <a class="contact-card" href="https://github.com/yourname" target="_blank" rel="noopener"><b>GitHub</b><span>github.com/yourname</span></a>
+        <a class="contact-card" href="https://linkedin.com/in/yourname" target="_blank" rel="noopener"><b>LinkedIn</b><span>linkedin.com/in/yourname</span></a>
       </div>
     </div>
   </section>
@@ -170,14 +148,10 @@
 
 <footer class="footer">
   <div class="container foot-in">
-    <span>&copy; <span id="year">2026</span> Umair Riaz. All rights reserved.</span>
+    <span>&copy; <span id="year">2026</span> Your Name. All rights reserved.</span>
     <a href="#home">Back to top &uarr;</a>
   </div>
 </footer>
-
-<a class="wa-float" href="https://api.whatsapp.com/send?phone=923222566149&amp;text=Hi%21%20Umair%20Riaz" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c.3 2 2.2 4 4.5 4.5l1.2-1.2-1.8-1-.8.6a3.5 3.5 0 0 1-1.6-1.6l.6-.8-1-1.800z"/></svg>
-</a>
 
 <script src="js/projects-data.js"></script>
 <script src="js/main.js"></script>
