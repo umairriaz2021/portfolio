@@ -3,13 +3,16 @@
 Portfolio generator.
 
 tools/projects.json se:
-  - har project ka folder:  projects/<slug>/index.html (detail page)
-  - dummy images (sirf tab jab aap ne apni images nahi rakhi hon)
-  - js/projects-data.js (home page ki listing ke liye)
+  - har project ka folder:  projects/<category>/<slug>/index.html   (e.g. projects/laravel/businesspal/)
+  - dummy thumbnail (sirf tab jab aap ne apni image nahi rakhi)
+  - js/projects-data.js  (home page ki listing ke liye)
 banata hai.
 
 Chalane ka tareeqa (Python 3 chahiye):
     python tools/build.py
+
+Naya project add karna ho to:
+    python tools/new_project.py react "My App" --url https://myapp.com --summary "Short description"
 
 Agar kisi project ka detail page aap ne hath se customize kar liya hai to us folder mein
 ek khali file ".manual" bana dein, phir build.py us ka index.html overwrite nahi karega.
@@ -17,16 +20,22 @@ ek khali file ".manual" bana dein, phir build.py us ka index.html overwrite nahi
 import html
 import json
 import os
+from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG_EXT = ('.svg', '.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif')
 
-# Naya technology add karna ho to yahan add karein (key, name, color, short label)
+# ---- Site settings (header/footer/detail pages mein use hoti hain) ----
+SITE_NAME = "Umair Riaz"
+SITE_INITIALS = "UR"
+WHATSAPP = "923222566149"          # country code ke saath, + ke baghair
+
+# Naya technology add karna ho to yahan add karein: key -> name, color, short label, optional icon
 TECH = {
-    "wordpress": {"name": "WordPress",    "color": "#21759b", "short": "Wp"},
-    "shopify":   {"name": "Shopify",      "color": "#5e8e3e", "short": "Sh"},
-    "laravel":   {"name": "Laravel",      "color": "#ff2d20", "short": "La"},
-    "react":     {"name": "React",        "color": "#149eca", "short": "Re"},
+    "wordpress": {"name": "WordPress",    "color": "#21759b", "short": "Wp", "icon": "assets/images/icons/wordpress.png"},
+    "shopify":   {"name": "Shopify",      "color": "#5e8e3e", "short": "Sh", "icon": "assets/images/icons/shopify-icon.svg"},
+    "laravel":   {"name": "Laravel",      "color": "#ff2d20", "short": "La", "icon": "assets/images/icons/laravel.png"},
+    "react":     {"name": "React",        "color": "#149eca", "short": "Re", "icon": "assets/images/icons/react.png"},
     "aspnet":    {"name": "ASP.NET Core", "color": "#512bd4", "short": ".N"},
     "angular":   {"name": "Angular",      "color": "#dd0031", "short": "Ng"},
 }
@@ -40,6 +49,13 @@ def shade(hex_color, factor):
     h = hex_color.lstrip('#')
     r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
     return '#%02x%02x%02x' % (int(r * factor), int(g * factor), int(b * factor))
+
+
+def host_of(url):
+    if not url:
+        return ''
+    h = urlparse(url).netloc
+    return h[4:] if h.startswith('www.') else h
 
 
 def make_svg(color, tech_name, title, variant):
@@ -92,7 +108,7 @@ def make_svg(color, tech_name, title, variant):
 <rect x="160" y="60" width="420" height="20" rx="10" fill="#ffffff"/>
 {body}
 <text x="740" y="476" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity=".9">{esc(tech_name)}</text>
-<text x="60" y="476" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#ffffff" opacity=".85">Dummy preview - apni image se replace karein</text>
+<text x="60" y="476" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#ffffff" opacity=".85">Placeholder - thumbnail.png rakh kar replace karein</text>
 </svg>
 '''
 
@@ -100,7 +116,7 @@ def make_svg(color, tech_name, title, variant):
 def header(prefix):
     return f'''<header class="nav">
   <div class="container nav-in">
-    <a class="logo" href="{prefix}index.html"><span class="logo-mark">&lt;/&gt;</span> YourName<span class="dot">.dev</span></a>
+    <a class="logo" href="{prefix}index.html"><span class="logo-mark">{esc(SITE_INITIALS)}</span> {esc(SITE_NAME)}</a>
     <nav class="menu" aria-label="Main">
       <a href="{prefix}index.html#home">Home</a>
       <a href="{prefix}index.html#projects">Projects</a>
@@ -120,34 +136,59 @@ def header(prefix):
 </header>'''
 
 
-def detail_page(p, idx, projects, thumb, shots):
-    prefix = '../../'
+WA_ICON = '<svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c.3 2 2.200 4 4.500 4.500l1.200-1.200-1.800-1-.8.600a3.500 3.500 0 0 1-1.600-1.600l.6-.8-1-1.800z"/></svg>'
+
+
+def whatsapp_float():
+    return f'<a class="wa-float" href="https://api.whatsapp.com/send?phone={WHATSAPP}&text=Hi%21%20{esc(SITE_NAME).replace(" ", "%20")}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">{WA_ICON}</a>'
+
+
+def detail_page(p, siblings, pos, thumb, shots):
+    prefix = '../../../'
     t = TECH[p['category']]
     li = lambda xs: ''.join(f'<li>{esc(x)}</li>' for x in xs)
     tags = ''.join(f'<span>{esc(x)}</span>' for x in p.get('tags', []))
 
     actions = ''
     if p.get('live'):
-        actions += f'<a class="btn btn-primary" href="{esc(p["live"])}" target="_blank" rel="noopener">Live Demo &nearr;</a>'
+        actions += f'<a class="btn btn-primary" href="{esc(p["live"])}" target="_blank" rel="noopener">Visit Website &nearr;</a>'
     if p.get('github'):
         actions += f'<a class="btn btn-ghost" href="{esc(p["github"])}" target="_blank" rel="noopener">Source Code &nearr;</a>'
     actions += f'<a class="btn btn-ghost" href="{prefix}index.html#projects">&larr; All Projects</a>'
 
-    blocks = ''
+    desc = p.get('description') or p['summary']
+    sections = f'<section class="panel"><h2>Overview</h2><p>{esc(desc)}</p></section>'
+    if p.get('features'):
+        sections += f'<section class="panel"><h2>Key Features</h2><ul class="feat">{li(p["features"])}</ul></section>'
     for key, label in (('challenges', 'Challenges'), ('results', 'Results')):
         if p.get(key):
-            blocks += f'<div class="panel"><h2>{label}</h2><p>{esc(p[key])}</p></div>'
+            sections += f'<section class="panel"><h2>{label}</h2><p>{esc(p[key])}</p></section>'
+
+    rows = []
+    if p.get('client'):
+        rows.append(('Client', p['client']))
+    if p.get('role'):
+        rows.append(('Role', p['role']))
+    if p.get('year'):
+        rows.append(('Year', p['year']))
+    if p.get('duration'):
+        rows.append(('Duration', p['duration']))
+    rows.append(('Platform', t['name']))
+    if p.get('live'):
+        rows.append(('Website', host_of(p['live'])))
+    info = ''.join(f'<li><span>{esc(a)}</span><b>{esc(b)}</b></li>' for a, b in rows)
 
     gallery = ''
     if shots:
         imgs = ''.join(f'<img loading="lazy" data-lightbox src="screenshots/{esc(s)}" alt="{esc(p["title"])} screenshot {n}">' for n, s in enumerate(shots, 1))
         gallery = f'<section class="panel reveal"><h2>Screenshots</h2><div class="gallery">{imgs}</div></section>'
 
-    prev_p = projects[idx - 1] if idx > 0 else None
-    next_p = projects[idx + 1] if idx < len(projects) - 1 else None
-    prev_html = (f'<a href="../{esc(prev_p["slug"])}/index.html"><small>&larr; Previous</small><b>{esc(prev_p["title"])}</b></a>'
+    # previous / next - isi category ke andar
+    prev_p = siblings[pos - 1] if pos > 0 else None
+    next_p = siblings[pos + 1] if pos < len(siblings) - 1 else None
+    prev_html = (f'<a href="../{esc(prev_p["slug"])}/index.html"><small>&larr; Previous in {esc(t["name"])}</small><b>{esc(prev_p["title"])}</b></a>'
                  if prev_p else '<a class="ph"></a>')
-    next_html = (f'<a class="next" href="../{esc(next_p["slug"])}/index.html"><small>Next &rarr;</small><b>{esc(next_p["title"])}</b></a>'
+    next_html = (f'<a class="next" href="../{esc(next_p["slug"])}/index.html"><small>Next in {esc(t["name"])} &rarr;</small><b>{esc(next_p["title"])}</b></a>'
                  if next_p else '<a class="ph"></a>')
 
     return f'''<!DOCTYPE html>
@@ -155,7 +196,7 @@ def detail_page(p, idx, projects, thumb, shots):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{esc(p["title"])} | Your Name</title>
+  <title>{esc(p["title"])} | {esc(SITE_NAME)}</title>
   <meta name="description" content="{esc(p["summary"])}">
   <meta property="og:title" content="{esc(p["title"])}">
   <meta property="og:description" content="{esc(p["summary"])}">
@@ -169,7 +210,7 @@ def detail_page(p, idx, projects, thumb, shots):
 <body style="--c:{t["color"]}">
 {header(prefix)}
 <main class="container">
-  <div class="crumbs"><a href="{prefix}index.html">Home</a><span>/</span><a href="{prefix}index.html#projects">Projects</a><span>/</span>{esc(p["title"])}</div>
+  <div class="crumbs"><a href="{prefix}index.html">Home</a><span>/</span><a href="{prefix}index.html#projects">Projects</a><span>/</span>{esc(t["name"])}<span>/</span>{esc(p["title"])}</div>
 
   <section class="p-hero">
     <span class="badge" style="--c:{t["color"]}">{esc(t["name"])}</span>
@@ -181,21 +222,11 @@ def detail_page(p, idx, projects, thumb, shots):
   <div class="cover"><img data-lightbox src="{esc(thumb)}" alt="{esc(p["title"])} cover"></div>
 
   <div class="p-layout">
-    <div>
-      <section class="panel"><h2>Overview</h2><p>{esc(p.get("description", ""))}</p></section>
-      <section class="panel"><h2>Key Features</h2><ul class="feat">{li(p.get("features", []))}</ul></section>
-      {blocks}
-    </div>
+    <div>{sections}</div>
     <aside class="side">
       <div class="panel">
         <h2>Project Info</h2>
-        <ul class="info">
-          <li><span>Client</span><b>{esc(p.get("client", "-"))}</b></li>
-          <li><span>Role</span><b>{esc(p.get("role", "-"))}</b></li>
-          <li><span>Year</span><b>{esc(p.get("year", "-"))}</b></li>
-          <li><span>Duration</span><b>{esc(p.get("duration", "-"))}</b></li>
-          <li><span>Platform</span><b>{esc(t["name"])}</b></li>
-        </ul>
+        <ul class="info">{info}</ul>
       </div>
       <div class="panel"><h2>Tech Stack</h2><div class="tags">{tags}</div></div>
     </aside>
@@ -208,10 +239,11 @@ def detail_page(p, idx, projects, thumb, shots):
 
 <footer class="footer">
   <div class="container foot-in">
-    <span>&copy; <span id="year">2026</span> Your Name. All rights reserved.</span>
+    <span>&copy; <span id="year">2026</span> {esc(SITE_NAME)}. All rights reserved.</span>
     <a href="{prefix}index.html#projects">&larr; Back to projects</a>
   </div>
 </footer>
+{whatsapp_float()}
 <script src="{prefix}js/main.js"></script>
 </body>
 </html>
@@ -229,67 +261,84 @@ def main():
     with open(src, encoding='utf-8') as f:
         projects = json.load(f)
 
-    slugs = set()
-    data = []
-    for i, p in enumerate(projects):
-        slug = p['slug']
-        if slug in slugs:
-            raise SystemExit(f'Duplicate slug: {slug}')
-        slugs.add(slug)
+    seen = set()
+    for p in projects:
         if p['category'] not in TECH:
-            raise SystemExit(f'Unknown category "{p["category"]}" in {slug}. TECH dict mein add karein.')
+            raise SystemExit(f'Unknown category "{p["category"]}" ({p["slug"]}). build.py ke TECH dict mein add karein.')
+        key = (p['category'], p['slug'])
+        if key in seen:
+            raise SystemExit(f'Duplicate project: {p["category"]}/{p["slug"]}')
+        seen.add(key)
 
-        t = TECH[p['category']]
-        folder = os.path.join(ROOT, 'projects', slug)
+    by_cat = {}
+    for p in projects:
+        by_cat.setdefault(p['category'], []).append(p)
+
+    # listing order: TECH ki tarteeb ke mutabiq category-wise
+    ordered = [p for k in TECH for p in by_cat.get(k, [])]
+
+    data = []
+    for p in ordered:
+        cat, slug = p['category'], p['slug']
+        t = TECH[cat]
+        siblings = by_cat[cat]
+        pos = siblings.index(p)
+        folder = os.path.join(ROOT, 'projects', cat, slug)
         shots_dir = os.path.join(folder, 'screenshots')
         os.makedirs(shots_dir, exist_ok=True)
+        variant = ordered.index(p) % 3
 
         # thumbnail: apni image (thumbnail.png/jpg/webp...) rakhein to wahi use hogi
         thumbs = [f for f in os.listdir(folder) if f.lower().startswith('thumbnail.') and f.lower().endswith(IMG_EXT)]
         if not thumbs:
             with open(os.path.join(folder, 'thumbnail.svg'), 'w', encoding='utf-8') as f:
-                f.write(make_svg(t['color'], t['name'], p['title'], i % 3))
+                f.write(make_svg(t['color'], t['name'], p['title'], variant))
             thumbs = ['thumbnail.svg']
         thumb = thumbs[0]
 
-        # screenshots
+        # screenshots: sirf aap ki rakhi hui images; dummy projects ke liye placeholder gallery
         shots = find_images(shots_dir)
-        if not shots:
+        if not shots and p.get('dummy'):
             for n in range(3):
                 name = f'shot-{n + 1}.svg'
                 with open(os.path.join(shots_dir, name), 'w', encoding='utf-8') as f:
-                    f.write(make_svg(t['color'], t['name'], f'{p["title"]} screenshot {n + 1}', (i + n + 1) % 3))
+                    f.write(make_svg(t['color'], t['name'], f'{p["title"]} screenshot {n + 1}', (variant + n + 1) % 3))
             shots = find_images(shots_dir)
+        if not shots:
+            keep = os.path.join(shots_dir, '.gitkeep')
+            if not os.path.exists(keep):
+                open(keep, 'w').close()
 
-        # detail page
         page = os.path.join(folder, 'index.html')
         if os.path.exists(os.path.join(folder, '.manual')) and os.path.exists(page):
-            print(f'  skip (manual): {slug}')
+            print(f'  skip (manual): {cat}/{slug}')
         else:
             with open(page, 'w', encoding='utf-8') as f:
-                f.write(detail_page(p, i, projects, thumb, shots))
+                f.write(detail_page(p, siblings, pos, thumb, shots))
 
         data.append({
             'slug': slug,
             'title': p['title'],
-            'category': p['category'],
+            'category': cat,
             'tags': p.get('tags', []),
             'year': p.get('year', ''),
             'client': p.get('client', ''),
+            'host': host_of(p.get('live', '')),
             'summary': p['summary'],
             'featured': bool(p.get('featured')),
-            'url': f'projects/{slug}/index.html',
-            'thumb': f'projects/{slug}/{thumb}',
+            'url': f'projects/{cat}/{slug}/index.html',
+            'thumb': f'projects/{cat}/{slug}/{thumb}',
         })
 
-    tech_out = {k: {'name': v['name'], 'color': v['color'], 'short': v['short']} for k, v in TECH.items()}
+    tech_out = {k: {kk: vv for kk, vv in v.items()} for k, v in TECH.items()}
     js_path = os.path.join(ROOT, 'js', 'projects-data.js')
     with open(js_path, 'w', encoding='utf-8') as f:
         f.write('/* AUTO-GENERATED by tools/build.py - is file ko hath se edit na karein, tools/projects.json edit karein */\n')
         f.write('window.TECH = ' + json.dumps(tech_out, indent=2, ensure_ascii=False) + ';\n')
         f.write('window.PROJECTS = ' + json.dumps(data, indent=2, ensure_ascii=False) + ';\n')
 
-    print(f'Done: {len(data)} projects generated.')
+    counts = ', '.join(f'{TECH[k]["name"]}: {len(v)}' for k, v in by_cat.items())
+    print(f'Done: {len(data)} projects generated ({counts}).')
 
 
 if __name__ == '__main__':

@@ -3,22 +3,26 @@ window.TECH = {
   "wordpress": {
     "name": "WordPress",
     "color": "#21759b",
-    "short": "Wp"
+    "short": "Wp",
+    "icon": "assets/images/icons/wordpress.png"
   },
   "shopify": {
     "name": "Shopify",
     "color": "#5e8e3e",
-    "short": "Sh"
+    "short": "Sh",
+    "icon": "assets/images/icons/shopify-icon.svg"
   },
   "laravel": {
     "name": "Laravel",
     "color": "#ff2d20",
-    "short": "La"
+    "short": "La",
+    "icon": "assets/images/icons/laravel.png"
   },
   "react": {
     "name": "React",
     "color": "#149eca",
-    "short": "Re"
+    "short": "Re",
+    "icon": "assets/images/icons/react.png"
   },
   "aspnet": {
     "name": "ASP.NET Core",
@@ -33,142 +37,577 @@ window.TECH = {
 };
 window.PROJECTS = [
   {
-    "slug": "fashion-store-shopify",
-    "title": "Urban Threads - Fashion Store",
-    "category": "shopify",
-    "tags": [
-      "Liquid",
-      "Shopify 2.0",
-      "JavaScript",
-      "SCSS"
-    ],
-    "year": 2025,
-    "client": "Urban Threads",
-    "summary": "Custom Shopify 2.0 theme with quick-view, size guide and ajax cart for a fashion brand.",
-    "featured": true,
-    "url": "projects/fashion-store-shopify/index.html",
-    "thumb": "projects/fashion-store-shopify/thumbnail.svg"
-  },
-  {
-    "slug": "gadget-hub-shopify",
-    "title": "Gadget Hub - Electronics Store",
-    "category": "shopify",
-    "tags": [
-      "Liquid",
-      "Shopify Apps",
-      "Klaviyo"
-    ],
-    "year": 2024,
-    "client": "Gadget Hub",
-    "summary": "Electronics store with product comparison, bundles and email automation.",
-    "featured": false,
-    "url": "projects/gadget-hub-shopify/index.html",
-    "thumb": "projects/gadget-hub-shopify/thumbnail.svg"
-  },
-  {
-    "slug": "corporate-site-wordpress",
-    "title": "Nexa Corp - Corporate Website",
+    "slug": "routica",
+    "title": "Routica",
     "category": "wordpress",
     "tags": [
       "WordPress",
-      "Elementor",
-      "PHP",
-      "ACF"
+      "Travel"
     ],
-    "year": 2025,
-    "client": "Nexa Corporation",
-    "summary": "Fast multilingual corporate website with custom post types and ACF blocks.",
-    "featured": true,
-    "url": "projects/corporate-site-wordpress/index.html",
-    "thumb": "projects/corporate-site-wordpress/thumbnail.svg"
+    "year": "",
+    "client": "",
+    "host": "routica.com",
+    "summary": "Routica is a travel platform that helps users discover destinations, plan trips, and book travel routes easily and efficiently.",
+    "featured": false,
+    "url": "projects/wordpress/routica/index.html",
+    "thumb": "projects/wordpress/routica/thumbnail.svg"
   },
   {
-    "slug": "woocommerce-grocery",
-    "title": "FreshCart - WooCommerce Grocery",
+    "slug": "branex",
+    "title": "Branex",
     "category": "wordpress",
     "tags": [
-      "WooCommerce",
-      "PHP",
-      "REST API",
-      "MySQL"
+      "WordPress",
+      "Digital Agency"
     ],
-    "year": 2024,
-    "client": "FreshCart",
-    "summary": "Online grocery with delivery slots, area-wise pricing and custom checkout.",
+    "year": "",
+    "client": "",
+    "host": "branex.com",
+    "summary": "Branex is a digital agency offering creative design, web development, branding, and marketing solutions to help businesses grow online effectively.",
     "featured": false,
-    "url": "projects/woocommerce-grocery/index.html",
-    "thumb": "projects/woocommerce-grocery/thumbnail.svg"
+    "url": "projects/wordpress/branex/index.html",
+    "thumb": "projects/wordpress/branex/thumbnail.svg"
   },
   {
-    "slug": "school-management-laravel",
-    "title": "EduPro - School Management System",
-    "category": "laravel",
+    "slug": "hostnoc",
+    "title": "Hostnoc",
+    "category": "wordpress",
     "tags": [
-      "Laravel 11",
-      "MySQL",
-      "Bootstrap",
-      "Livewire"
+      "WordPress",
+      "Business Solutions"
     ],
-    "year": 2025,
-    "client": "EduPro Schools",
-    "summary": "Multi-branch school ERP: students, fees, attendance, exams and parent portal.",
-    "featured": true,
-    "url": "projects/school-management-laravel/index.html",
-    "thumb": "projects/school-management-laravel/thumbnail.svg"
+    "year": "",
+    "client": "",
+    "host": "hosnoc.com",
+    "summary": "Hosnoc is a platform providing innovative business solutions, consulting, and technology services designed to empower companies and drive growth.",
+    "featured": false,
+    "url": "projects/wordpress/hostnoc/index.html",
+    "thumb": "projects/wordpress/hostnoc/thumbnail.svg"
   },
   {
-    "slug": "crm-api-laravel",
-    "title": "LeadFlow - CRM & REST API",
+    "slug": "hastycart",
+    "title": "HastyCart",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Grocery",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "hhcdropshipping.com",
+    "summary": "HastyCart is an online service that delivers groceries from local stores quickly, making shopping easy and hassle-free.",
+    "featured": false,
+    "url": "projects/wordpress/hastycart/index.html",
+    "thumb": "projects/wordpress/hastycart/thumbnail.svg"
+  },
+  {
+    "slug": "hhc-dropshipping",
+    "title": "Hhc Dropshipping",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Dropshipping",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "hhcdropshipping.com",
+    "summary": "HHC Dropshipping is an eCommerce service helping businesses source products, manage inventory, and run successful online stores.",
+    "featured": false,
+    "url": "projects/wordpress/hhc-dropshipping/index.html",
+    "thumb": "projects/wordpress/hhc-dropshipping/thumbnail.svg"
+  },
+  {
+    "slug": "crown-group",
+    "title": "Crown Group of Companies",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Automotive"
+    ],
+    "year": "",
+    "client": "",
+    "host": "crowngroup.com.pk",
+    "summary": "Crown Group is a trusted name in Pakistan’s automotive sector, offering quality parts, accessories, and solutions to meet diverse mobility needs.",
+    "featured": false,
+    "url": "projects/wordpress/crown-group/index.html",
+    "thumb": "projects/wordpress/crown-group/thumbnail.svg"
+  },
+  {
+    "slug": "crown-solar",
+    "title": "Crown Solar",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Solar Energy"
+    ],
+    "year": "",
+    "client": "",
+    "host": "crownsolar.com",
+    "summary": "Crown Solar provides reliable solar energy solutions in Pakistan, offering solar panels, systems, and services for homes, businesses, and industries.",
+    "featured": false,
+    "url": "projects/wordpress/crown-solar/index.html",
+    "thumb": "projects/wordpress/crown-solar/thumbnail.svg"
+  },
+  {
+    "slug": "crown-softex",
+    "title": "Crown Softex",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Textile"
+    ],
+    "year": "",
+    "client": "",
+    "host": "crownsoftex.com",
+    "summary": "Crown Softex specializes in high-quality textile products and home essentials, offering comfort, durability, and elegance for everyday living.",
+    "featured": false,
+    "url": "projects/wordpress/crown-softex/index.html",
+    "thumb": "projects/wordpress/crown-softex/thumbnail.svg"
+  },
+  {
+    "slug": "natures-mix",
+    "title": "Natures Mix",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Food",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "naturesmix.ca",
+    "summary": "Natures Mix offers healthy, natural, and delicious granola products made with premium ingredients to support your active and balanced lifestyle.",
+    "featured": false,
+    "url": "projects/wordpress/natures-mix/index.html",
+    "thumb": "projects/wordpress/natures-mix/thumbnail.svg"
+  },
+  {
+    "slug": "hugedomains",
+    "title": "HugeDomains",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Domains"
+    ],
+    "year": "",
+    "client": "",
+    "host": "hugedomains.com",
+    "summary": "HugeDomains offers a wide selection of premium domain names, making it easy for individuals and businesses to find the perfect online identity.",
+    "featured": false,
+    "url": "projects/wordpress/hugedomains/index.html",
+    "thumb": "projects/wordpress/hugedomains/thumbnail.svg"
+  },
+  {
+    "slug": "digitechs",
+    "title": "Digitechs",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "IT Services"
+    ],
+    "year": "",
+    "client": "",
+    "host": "digitechs.org",
+    "summary": "Digitechs provides expert IT solutions and digital services to help businesses optimize operations and drive growth through technology.",
+    "featured": false,
+    "url": "projects/wordpress/digitechs/index.html",
+    "thumb": "projects/wordpress/digitechs/thumbnail.svg"
+  },
+  {
+    "slug": "afghan-carpet",
+    "title": "Afghan Carpet",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Carpets",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "afghancarpet.com",
+    "summary": "Afghan Carpet offers authentic, handwoven carpets bringing traditional art to your home.",
+    "featured": false,
+    "url": "projects/wordpress/afghan-carpet/index.html",
+    "thumb": "projects/wordpress/afghan-carpet/thumbnail.svg"
+  },
+  {
+    "slug": "mausummery",
+    "title": "Mausummery",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Weather"
+    ],
+    "year": "",
+    "client": "",
+    "host": "mausummery.com",
+    "summary": "Mausummery delivers accurate weather forecasts and climate insights to help you plan better.",
+    "featured": false,
+    "url": "projects/wordpress/mausummery/index.html",
+    "thumb": "projects/wordpress/mausummery/thumbnail.svg"
+  },
+  {
+    "slug": "the-art-valley",
+    "title": "The Art Valley",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Art"
+    ],
+    "year": "",
+    "client": "",
+    "host": "theartvalley.com",
+    "summary": "The Art Valley showcases unique artwork and creative designs to inspire and beautify spaces.",
+    "featured": false,
+    "url": "projects/wordpress/the-art-valley/index.html",
+    "thumb": "projects/wordpress/the-art-valley/thumbnail.svg"
+  },
+  {
+    "slug": "fitwize4kids",
+    "title": "Fitwize4Kids",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Fitness"
+    ],
+    "year": "",
+    "client": "",
+    "host": "fitwize4kids.com",
+    "summary": "Fitwize4Kids promotes fun and healthy fitness programs designed specifically for children’s growth.",
+    "featured": false,
+    "url": "projects/wordpress/fitwize4kids/index.html",
+    "thumb": "projects/wordpress/fitwize4kids/thumbnail.svg"
+  },
+  {
+    "slug": "global-now-inc",
+    "title": "Global Now Inc",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Technology"
+    ],
+    "year": "",
+    "client": "",
+    "host": "globalnowinc.com",
+    "summary": "Global Now Inc delivers innovative technology solutions to empower businesses worldwide efficiently.",
+    "featured": false,
+    "url": "projects/wordpress/global-now-inc/index.html",
+    "thumb": "projects/wordpress/global-now-inc/thumbnail.svg"
+  },
+  {
+    "slug": "body-of-sound",
+    "title": "Body of Sound",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Wellness"
+    ],
+    "year": "",
+    "client": "",
+    "host": "bodyofsound.com",
+    "summary": "Body of Sound offers holistic healing through sound therapy to restore balance and wellness.",
+    "featured": false,
+    "url": "projects/wordpress/body-of-sound/index.html",
+    "thumb": "projects/wordpress/body-of-sound/thumbnail.svg"
+  },
+  {
+    "slug": "verso-logistics",
+    "title": "Verso Logistics",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Logistics"
+    ],
+    "year": "",
+    "client": "",
+    "host": "verso-logistics.com",
+    "summary": "Verso Logistics provides efficient supply chain and transportation solutions to streamline your business.",
+    "featured": false,
+    "url": "projects/wordpress/verso-logistics/index.html",
+    "thumb": "projects/wordpress/verso-logistics/thumbnail.svg"
+  },
+  {
+    "slug": "fix-your-thyroid",
+    "title": "Fix Your Thyroid",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Health"
+    ],
+    "year": "",
+    "client": "",
+    "host": "fixyourthyroid.com",
+    "summary": "Fix Your Thyroid offers expert guidance and resources to support thyroid health and wellness.",
+    "featured": false,
+    "url": "projects/wordpress/fix-your-thyroid/index.html",
+    "thumb": "projects/wordpress/fix-your-thyroid/thumbnail.svg"
+  },
+  {
+    "slug": "911-wildlife",
+    "title": "911 Wildlife",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Wildlife Services"
+    ],
+    "year": "",
+    "client": "",
+    "host": "911wildlife.com",
+    "summary": "911 Wildlife provides emergency wildlife removal and humane animal control services with care.",
+    "featured": false,
+    "url": "projects/wordpress/911-wildlife/index.html",
+    "thumb": "projects/wordpress/911-wildlife/thumbnail.svg"
+  },
+  {
+    "slug": "justin-health",
+    "title": "Justin Health",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Health"
+    ],
+    "year": "",
+    "client": "",
+    "host": "justinhealth.com",
+    "summary": "Justin Health offers holistic health advice and natural wellness solutions to improve your life.",
+    "featured": false,
+    "url": "projects/wordpress/justin-health/index.html",
+    "thumb": "projects/wordpress/justin-health/thumbnail.svg"
+  },
+  {
+    "slug": "shipthrough",
+    "title": "ShipThrough",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Logistics"
+    ],
+    "year": "",
+    "client": "",
+    "host": "shipthrough.com",
+    "summary": "ShipThrough offers smart logistics solutions to optimize shipping, tracking, and supply chain management.",
+    "featured": false,
+    "url": "projects/wordpress/shipthrough/index.html",
+    "thumb": "projects/wordpress/shipthrough/thumbnail.svg"
+  },
+  {
+    "slug": "life-empowered",
+    "title": "Life Empowered",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Coaching"
+    ],
+    "year": "",
+    "client": "",
+    "host": "lifeempowered.com",
+    "summary": "Life Empowered provides coaching and tools to help you achieve personal growth and success.",
+    "featured": false,
+    "url": "projects/wordpress/life-empowered/index.html",
+    "thumb": "projects/wordpress/life-empowered/thumbnail.svg"
+  },
+  {
+    "slug": "cameras-dallas",
+    "title": "Cameras Dallas",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Photography"
+    ],
+    "year": "",
+    "client": "",
+    "host": "camerasdallas.com",
+    "summary": "Cameras Dallas offers a wide selection of photography equipment and expert camera services.",
+    "featured": false,
+    "url": "projects/wordpress/cameras-dallas/index.html",
+    "thumb": "projects/wordpress/cameras-dallas/thumbnail.svg"
+  },
+  {
+    "slug": "optimal-living-institute-idaho",
+    "title": "Optimal Living Institute Idaho",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Wellness"
+    ],
+    "year": "",
+    "client": "",
+    "host": "optimallivinginstituteidaho.com",
+    "summary": "Optimal Living Institute Idaho provides wellness programs and coaching for balanced, healthy living.",
+    "featured": false,
+    "url": "projects/wordpress/optimal-living-institute-idaho/index.html",
+    "thumb": "projects/wordpress/optimal-living-institute-idaho/thumbnail.svg"
+  },
+  {
+    "slug": "global-now-it",
+    "title": "Global Now IT",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "IT Services"
+    ],
+    "year": "",
+    "client": "",
+    "host": "globalnowit.com",
+    "summary": "Global Now IT delivers expert IT services and solutions to accelerate business growth.",
+    "featured": false,
+    "url": "projects/wordpress/global-now-it/index.html",
+    "thumb": "projects/wordpress/global-now-it/thumbnail.svg"
+  },
+  {
+    "slug": "health-beyond-wellness",
+    "title": "Health Beyond Wellness",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Health Coaching"
+    ],
+    "year": "",
+    "client": "",
+    "host": "healthbeyondwellness.com",
+    "summary": "Health Beyond Wellness offers personalized health coaching and holistic care for lasting vitality.",
+    "featured": false,
+    "url": "projects/wordpress/health-beyond-wellness/index.html",
+    "thumb": "projects/wordpress/health-beyond-wellness/thumbnail.svg"
+  },
+  {
+    "slug": "natural-nutritional-solutions",
+    "title": "Natural Nutritional Solutions",
+    "category": "wordpress",
+    "tags": [
+      "WordPress",
+      "Supplements"
+    ],
+    "year": "",
+    "client": "",
+    "host": "naturalnutritionalsolutions.com",
+    "summary": "Natural Nutritional Solutions provides quality supplements and guidance for healthier, balanced living.",
+    "featured": false,
+    "url": "projects/wordpress/natural-nutritional-solutions/index.html",
+    "thumb": "projects/wordpress/natural-nutritional-solutions/thumbnail.svg"
+  },
+  {
+    "slug": "crowneshop",
+    "title": "Crowneshop",
+    "category": "shopify",
+    "tags": [
+      "Shopify",
+      "Automotive",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "crowneshop.com",
+    "summary": "Crowneshop offers genuine motorcycle parts and accessories across Pakistan with quality and fast delivery.",
+    "featured": false,
+    "url": "projects/shopify/crowneshop/index.html",
+    "thumb": "projects/shopify/crowneshop/thumbnail.svg"
+  },
+  {
+    "slug": "coco-labon-kids",
+    "title": "Coco LaBon Kids",
+    "category": "shopify",
+    "tags": [
+      "Shopify",
+      "Kids",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "cocolabonkids.com",
+    "summary": "Coco LaBon Kids is an online store offering fun, high-quality products for kids, including clothing, accessories, and toys.",
+    "featured": false,
+    "url": "projects/shopify/coco-labon-kids/index.html",
+    "thumb": "projects/shopify/coco-labon-kids/thumbnail.svg"
+  },
+  {
+    "slug": "shop-mavrik",
+    "title": "Shop Mavrik",
+    "category": "shopify",
+    "tags": [
+      "Shopify",
+      "Wellness",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "shopmavrik.com",
+    "summary": "ShopMavrik.com offers portable tent saunas and accessories for convenient outdoor relaxation and wellness.",
+    "featured": false,
+    "url": "projects/shopify/shop-mavrik/index.html",
+    "thumb": "projects/shopify/shop-mavrik/thumbnail.svg"
+  },
+  {
+    "slug": "uniforms-warehouse",
+    "title": "Uniforms Warehouse",
+    "category": "shopify",
+    "tags": [
+      "Shopify",
+      "Uniforms",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "uniformswarehouse.com",
+    "summary": "Uniforms Warehouse supplies quality uniforms and gear for security and law enforcement across North America.",
+    "featured": false,
+    "url": "projects/shopify/uniforms-warehouse/index.html",
+    "thumb": "projects/shopify/uniforms-warehouse/thumbnail.svg"
+  },
+  {
+    "slug": "businesspal",
+    "title": "Businesspal",
     "category": "laravel",
     "tags": [
       "Laravel",
-      "REST API",
-      "Sanctum",
-      "Redis"
+      "Multi-vendor",
+      "Marketplace"
     ],
-    "year": 2024,
-    "client": "LeadFlow",
-    "summary": "CRM backend with REST API, queues, webhooks and role-based dashboards.",
+    "year": "",
+    "client": "",
+    "host": "staging.businesspal.ae",
+    "summary": "BusinessPal is a UAE-based multi-vendor marketplace connecting sellers and buyers across diverse categories.",
     "featured": false,
-    "url": "projects/crm-api-laravel/index.html",
-    "thumb": "projects/crm-api-laravel/thumbnail.svg"
+    "url": "projects/laravel/businesspal/index.html",
+    "thumb": "projects/laravel/businesspal/thumbnail.svg"
   },
   {
-    "slug": "ecommerce-react",
-    "title": "ShopSphere - React Storefront",
+    "slug": "i-got-the-spot",
+    "title": "I Got The Spot",
+    "category": "laravel",
+    "tags": [
+      "Laravel",
+      "Multi-vendor",
+      "E-commerce"
+    ],
+    "year": "",
+    "client": "",
+    "host": "igotthisspot.branex.org",
+    "summary": "I Got The Spot is a multi-vendor e-commerce platform empowering small businesses to sell products online.",
+    "featured": false,
+    "url": "projects/laravel/i-got-the-spot/index.html",
+    "thumb": "projects/laravel/i-got-the-spot/thumbnail.svg"
+  },
+  {
+    "slug": "taj-saha",
+    "title": "Taj Saha",
     "category": "react",
     "tags": [
       "React",
-      "Redux Toolkit",
-      "Tailwind",
-      "Stripe"
+      "Health Platform"
     ],
-    "year": 2025,
-    "client": "ShopSphere",
-    "summary": "Headless e-commerce storefront with cart, wishlist and Stripe checkout.",
-    "featured": true,
-    "url": "projects/ecommerce-react/index.html",
-    "thumb": "projects/ecommerce-react/thumbnail.svg"
-  },
-  {
-    "slug": "analytics-dashboard-react",
-    "title": "InsightBoard - Analytics Dashboard",
-    "category": "react",
-    "tags": [
-      "React",
-      "TypeScript",
-      "Recharts",
-      "Vite"
-    ],
-    "year": 2024,
-    "client": "InsightBoard",
-    "summary": "Realtime analytics dashboard with charts, filters and export options.",
+    "year": "",
+    "client": "",
+    "host": "tajasaha.com",
+    "summary": "Taja Saha is a digital health platform supporting chronic condition management in the Arab world with tailored resources.",
     "featured": false,
-    "url": "projects/analytics-dashboard-react/index.html",
-    "thumb": "projects/analytics-dashboard-react/thumbnail.svg"
+    "url": "projects/react/taj-saha/index.html",
+    "thumb": "projects/react/taj-saha/thumbnail.svg"
   },
   {
-    "slug": "hr-portal-aspnet",
+    "slug": "hr-portal",
     "title": "PeopleHub - HR & Payroll Portal",
     "category": "aspnet",
     "tags": [
@@ -179,13 +618,14 @@ window.PROJECTS = [
     ],
     "year": 2025,
     "client": "PeopleHub",
+    "host": "",
     "summary": "HR system with payroll, leave management, attendance and employee self-service.",
     "featured": true,
-    "url": "projects/hr-portal-aspnet/index.html",
-    "thumb": "projects/hr-portal-aspnet/thumbnail.svg"
+    "url": "projects/aspnet/hr-portal/index.html",
+    "thumb": "projects/aspnet/hr-portal/thumbnail.svg"
   },
   {
-    "slug": "inventory-api-aspnet",
+    "slug": "inventory-api",
     "title": "StockMate - Inventory Web API",
     "category": "aspnet",
     "tags": [
@@ -196,13 +636,14 @@ window.PROJECTS = [
     ],
     "year": 2024,
     "client": "StockMate",
+    "host": "",
     "summary": "Inventory and POS API with JWT auth, Swagger docs and background jobs.",
     "featured": false,
-    "url": "projects/inventory-api-aspnet/index.html",
-    "thumb": "projects/inventory-api-aspnet/thumbnail.svg"
+    "url": "projects/aspnet/inventory-api/index.html",
+    "thumb": "projects/aspnet/inventory-api/thumbnail.svg"
   },
   {
-    "slug": "erp-frontend-angular",
+    "slug": "erp-frontend",
     "title": "OpsCenter - ERP Frontend",
     "category": "angular",
     "tags": [
@@ -213,13 +654,14 @@ window.PROJECTS = [
     ],
     "year": 2025,
     "client": "OpsCenter",
+    "host": "example.com",
     "summary": "Modular ERP frontend with lazy-loaded modules, NgRx store and role-based UI.",
     "featured": true,
-    "url": "projects/erp-frontend-angular/index.html",
-    "thumb": "projects/erp-frontend-angular/thumbnail.svg"
+    "url": "projects/angular/erp-frontend/index.html",
+    "thumb": "projects/angular/erp-frontend/thumbnail.svg"
   },
   {
-    "slug": "booking-app-angular",
+    "slug": "booking-app",
     "title": "BookIt - Appointment Booking",
     "category": "angular",
     "tags": [
@@ -230,9 +672,10 @@ window.PROJECTS = [
     ],
     "year": 2024,
     "client": "BookIt",
+    "host": "example.com",
     "summary": "PWA booking app with realtime availability and push notifications.",
     "featured": false,
-    "url": "projects/booking-app-angular/index.html",
-    "thumb": "projects/booking-app-angular/thumbnail.svg"
+    "url": "projects/angular/booking-app/index.html",
+    "thumb": "projects/angular/booking-app/thumbnail.svg"
   }
 ];

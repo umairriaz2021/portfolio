@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="OpsCenter - ERP Frontend screenshot 2">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dd0031"/><stop offset="1" stop-color="#630016"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#g)"/>
+<rect x="60" y="48" width="680" height="404" rx="16" fill="#ffffff"/>
+<path d="M60 64a16 16 0 0 1 16-16h648a16 16 0 0 1 16 16v28H60z" fill="#eef1f6"/>
+<circle cx="86" cy="70" r="6" fill="#ff5f57"/><circle cx="106" cy="70" r="6" fill="#febc2e"/><circle cx="126" cy="70" r="6" fill="#28c840"/>
+<rect x="160" y="60" width="420" height="20" rx="10" fill="#ffffff"/>
+<rect x="100" y="120" width="260" height="22" rx="6" fill="#1e293b"/><rect x="100" y="152" width="200" height="22" rx="6" fill="#1e293b"/><rect x="100" y="192" width="300" height="10" rx="5" fill="#cbd5e1"/><rect x="100" y="210" width="270" height="10" rx="5" fill="#cbd5e1"/><rect x="100" y="244" width="120" height="38" rx="10" fill="#dd0031"/><rect x="232" y="244" width="110" height="38" rx="10" fill="#e2e8f0"/><rect x="440" y="110" width="260" height="210" rx="16" fill="#dd0031" opacity=".18"/><circle cx="570" cy="215" r="58" fill="#dd0031" opacity=".55"/><rect x="100" y="340" width="600" height="70" rx="12" fill="#f1f5f9"/>
+<text x="740" y="476" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity=".9">Angular</text>
+<text x="60" y="476" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#ffffff" opacity=".85">Placeholder - thumbnail.png rakh kar replace karein</text>
+</svg>
