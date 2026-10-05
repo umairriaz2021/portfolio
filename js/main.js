@@ -58,8 +58,13 @@
       var visible = list.slice(0, shown);
       grid.innerHTML = visible.map(function (p, i) {
         var t = T[p.category];
+        var L = p.logo;
+        var media = L
+          ? '<div class="card-img logo-thumb" style="--bg:' + esc(L.bg) + ';--lw:' + L.lw + '%;--r:' + L.r + (L.mw ? ';--mw:' + L.mw + 'px' : '') + '">' +
+            '<img class="logo" loading="lazy" src="' + esc(L.src) + '" alt="' + esc(p.title) + ' logo">'
+          : '<div class="card-img"><img loading="lazy" src="' + esc(p.thumb) + '" alt="' + esc(p.title) + '">';
         return '<a class="card" style="--c:' + t.color + ';animation-delay:' + (i * 60) + 'ms" href="' + esc(p.url) + '">' +
-          '<div class="card-img"><img loading="lazy" src="' + esc(p.thumb) + '" alt="' + esc(p.title) + '">' +
+          media +
           '<span class="badge">' + esc(t.name) + '</span>' + (p.featured ? '<span class="star">&#9733; Featured</span>' : '') + '</div>' +
           '<div class="card-body"><div class="card-meta"><span>' + esc(p.client || p.host || '') + '</span><span>' + esc(p.year || '') + '</span></div>' +
           '<h3>' + esc(p.title) + '</h3><p>' + esc(p.summary) + '</p>' +

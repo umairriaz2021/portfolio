@@ -186,6 +186,16 @@ ul{margin:0;padding:0}
 .wa-float:hover{transform:scale(1.08)}
 @media (max-width:760px){.stack-rows div{grid-template-columns:1fr;gap:4px}.about-more{padding:22px}}
 
+/* LOGO THUMBNAILS: sirf logo, asli aspect ratio, koi text nahi */
+.logo-thumb{display:grid;place-items:center;background:var(--bg,#f4f6fa)}
+.card-img.logo-thumb{aspect-ratio:16/10}
+.card-img.logo-thumb img.logo,.cover.logo-thumb img.logo{height:auto;aspect-ratio:var(--r);object-fit:contain;max-width:var(--mw,none);transition:transform .4s ease}
+.card-img.logo-thumb img.logo{width:var(--lw)}
+.card:hover .card-img.logo-thumb img.logo{transform:scale(1.04)}
+.cover.logo-thumb{aspect-ratio:21/9;cursor:default}
+.cover.logo-thumb img.logo{width:var(--cw)}
+@media (max-width:560px){.cover.logo-thumb{aspect-ratio:16/10}}
+
 /* LIGHTBOX */
 .lb{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:rgba(5,8,18,.88);padding:24px;cursor:zoom-out}
 .lb.open{display:grid}

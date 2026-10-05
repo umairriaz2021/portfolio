@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="StockMate - Inventory Web API">
-<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#512bd4"/><stop offset="1" stop-color="#24135f"/></linearGradient></defs>
-<rect width="800" height="500" fill="url(#g)"/>
-<rect x="60" y="48" width="680" height="404" rx="16" fill="#ffffff"/>
-<path d="M60 64a16 16 0 0 1 16-16h648a16 16 0 0 1 16 16v28H60z" fill="#eef1f6"/>
-<circle cx="86" cy="70" r="6" fill="#ff5f57"/><circle cx="106" cy="70" r="6" fill="#febc2e"/><circle cx="126" cy="70" r="6" fill="#28c840"/>
-<rect x="160" y="60" width="420" height="20" rx="10" fill="#ffffff"/>
-<rect x="100" y="120" width="260" height="22" rx="6" fill="#1e293b"/><rect x="100" y="152" width="200" height="22" rx="6" fill="#1e293b"/><rect x="100" y="192" width="300" height="10" rx="5" fill="#cbd5e1"/><rect x="100" y="210" width="270" height="10" rx="5" fill="#cbd5e1"/><rect x="100" y="244" width="120" height="38" rx="10" fill="#512bd4"/><rect x="232" y="244" width="110" height="38" rx="10" fill="#e2e8f0"/><rect x="440" y="110" width="260" height="210" rx="16" fill="#512bd4" opacity=".18"/><circle cx="570" cy="215" r="58" fill="#512bd4" opacity=".55"/><rect x="100" y="340" width="600" height="70" rx="12" fill="#f1f5f9"/>
-<text x="740" y="476" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#ffffff" opacity=".9">ASP.NET Core</text>
-<text x="60" y="476" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#ffffff" opacity=".85">Placeholder - thumbnail.png rakh kar replace karein</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="ASP.NET Core"><!-- generated:build.py --><rect width="800" height="500" fill="#f4f6fa"/><g transform="translate(340 190) scale(5)"><path d="M24 8.77h-2.468v7.565h-1.425V8.77h-2.462V7.53H24zm-6.852 7.565h-4.821V7.53h4.63v1.24h-3.205v2.494h2.953v1.234h-2.953v2.604h3.396zm-6.708 0H8.882L4.78 9.863a2.896 2.896 0 0 1-.258-.51h-.036c.032.189.048.592.048 1.21v5.772H3.157V7.53h1.659l3.965 6.32c.167.261.275.442.323.54h.024c-.04-.233-.06-.629-.06-1.185V7.529h1.372zm-8.703-.693a.868.829 0 0 1-.869.829.868.829 0 0 1-.868-.83.868.829 0 0 1 .868-.828.868.829 0 0 1 .869.829Z" fill="#512bd4" opacity=".85"/></g></svg>

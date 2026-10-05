@@ -27,7 +27,8 @@ window.TECH = {
   "aspnet": {
     "name": "ASP.NET Core",
     "color": "#512bd4",
-    "short": ".N"
+    "short": ".N",
+    "glyph": "dotnet"
   },
   "angular": {
     "name": "Angular",
@@ -50,7 +51,8 @@ window.PROJECTS = [
     "summary": "Routica is a travel platform that helps users discover destinations, plan trips, and book travel routes easily and efficiently.",
     "featured": false,
     "url": "projects/wordpress/routica/index.html",
-    "thumb": "projects/wordpress/routica/thumbnail.svg"
+    "thumb": "projects/wordpress/routica/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "branex",
@@ -66,7 +68,8 @@ window.PROJECTS = [
     "summary": "Branex is a digital agency offering creative design, web development, branding, and marketing solutions to help businesses grow online effectively.",
     "featured": false,
     "url": "projects/wordpress/branex/index.html",
-    "thumb": "projects/wordpress/branex/thumbnail.svg"
+    "thumb": "projects/wordpress/branex/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "hostnoc",
@@ -82,7 +85,8 @@ window.PROJECTS = [
     "summary": "Hosnoc is a platform providing innovative business solutions, consulting, and technology services designed to empower companies and drive growth.",
     "featured": false,
     "url": "projects/wordpress/hostnoc/index.html",
-    "thumb": "projects/wordpress/hostnoc/thumbnail.svg"
+    "thumb": "projects/wordpress/hostnoc/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "hastycart",
@@ -95,11 +99,12 @@ window.PROJECTS = [
     ],
     "year": "",
     "client": "",
-    "host": "hhcdropshipping.com",
+    "host": "hastycart.ca",
     "summary": "HastyCart is an online service that delivers groceries from local stores quickly, making shopping easy and hassle-free.",
     "featured": false,
     "url": "projects/wordpress/hastycart/index.html",
-    "thumb": "projects/wordpress/hastycart/thumbnail.svg"
+    "thumb": "projects/wordpress/hastycart/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "hhc-dropshipping",
@@ -116,7 +121,8 @@ window.PROJECTS = [
     "summary": "HHC Dropshipping is an eCommerce service helping businesses source products, manage inventory, and run successful online stores.",
     "featured": false,
     "url": "projects/wordpress/hhc-dropshipping/index.html",
-    "thumb": "projects/wordpress/hhc-dropshipping/thumbnail.svg"
+    "thumb": "projects/wordpress/hhc-dropshipping/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "crown-group",
@@ -132,7 +138,8 @@ window.PROJECTS = [
     "summary": "Crown Group is a trusted name in Pakistan’s automotive sector, offering quality parts, accessories, and solutions to meet diverse mobility needs.",
     "featured": false,
     "url": "projects/wordpress/crown-group/index.html",
-    "thumb": "projects/wordpress/crown-group/thumbnail.svg"
+    "thumb": "projects/wordpress/crown-group/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "crown-solar",
@@ -148,7 +155,8 @@ window.PROJECTS = [
     "summary": "Crown Solar provides reliable solar energy solutions in Pakistan, offering solar panels, systems, and services for homes, businesses, and industries.",
     "featured": false,
     "url": "projects/wordpress/crown-solar/index.html",
-    "thumb": "projects/wordpress/crown-solar/thumbnail.svg"
+    "thumb": "projects/wordpress/crown-solar/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "crown-softex",
@@ -164,7 +172,8 @@ window.PROJECTS = [
     "summary": "Crown Softex specializes in high-quality textile products and home essentials, offering comfort, durability, and elegance for everyday living.",
     "featured": false,
     "url": "projects/wordpress/crown-softex/index.html",
-    "thumb": "projects/wordpress/crown-softex/thumbnail.svg"
+    "thumb": "projects/wordpress/crown-softex/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "natures-mix",
@@ -181,7 +190,8 @@ window.PROJECTS = [
     "summary": "Natures Mix offers healthy, natural, and delicious granola products made with premium ingredients to support your active and balanced lifestyle.",
     "featured": false,
     "url": "projects/wordpress/natures-mix/index.html",
-    "thumb": "projects/wordpress/natures-mix/thumbnail.svg"
+    "thumb": "projects/wordpress/natures-mix/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "hugedomains",
@@ -197,7 +207,8 @@ window.PROJECTS = [
     "summary": "HugeDomains offers a wide selection of premium domain names, making it easy for individuals and businesses to find the perfect online identity.",
     "featured": false,
     "url": "projects/wordpress/hugedomains/index.html",
-    "thumb": "projects/wordpress/hugedomains/thumbnail.svg"
+    "thumb": "projects/wordpress/hugedomains/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "digitechs",
@@ -213,7 +224,8 @@ window.PROJECTS = [
     "summary": "Digitechs provides expert IT solutions and digital services to help businesses optimize operations and drive growth through technology.",
     "featured": false,
     "url": "projects/wordpress/digitechs/index.html",
-    "thumb": "projects/wordpress/digitechs/thumbnail.svg"
+    "thumb": "projects/wordpress/digitechs/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "afghan-carpet",
@@ -230,7 +242,8 @@ window.PROJECTS = [
     "summary": "Afghan Carpet offers authentic, handwoven carpets bringing traditional art to your home.",
     "featured": false,
     "url": "projects/wordpress/afghan-carpet/index.html",
-    "thumb": "projects/wordpress/afghan-carpet/thumbnail.svg"
+    "thumb": "projects/wordpress/afghan-carpet/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "mausummery",
@@ -246,7 +259,8 @@ window.PROJECTS = [
     "summary": "Mausummery delivers accurate weather forecasts and climate insights to help you plan better.",
     "featured": false,
     "url": "projects/wordpress/mausummery/index.html",
-    "thumb": "projects/wordpress/mausummery/thumbnail.svg"
+    "thumb": "projects/wordpress/mausummery/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "the-art-valley",
@@ -262,7 +276,8 @@ window.PROJECTS = [
     "summary": "The Art Valley showcases unique artwork and creative designs to inspire and beautify spaces.",
     "featured": false,
     "url": "projects/wordpress/the-art-valley/index.html",
-    "thumb": "projects/wordpress/the-art-valley/thumbnail.svg"
+    "thumb": "projects/wordpress/the-art-valley/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "fitwize4kids",
@@ -278,7 +293,8 @@ window.PROJECTS = [
     "summary": "Fitwize4Kids promotes fun and healthy fitness programs designed specifically for children’s growth.",
     "featured": false,
     "url": "projects/wordpress/fitwize4kids/index.html",
-    "thumb": "projects/wordpress/fitwize4kids/thumbnail.svg"
+    "thumb": "projects/wordpress/fitwize4kids/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "global-now-inc",
@@ -294,7 +310,8 @@ window.PROJECTS = [
     "summary": "Global Now Inc delivers innovative technology solutions to empower businesses worldwide efficiently.",
     "featured": false,
     "url": "projects/wordpress/global-now-inc/index.html",
-    "thumb": "projects/wordpress/global-now-inc/thumbnail.svg"
+    "thumb": "projects/wordpress/global-now-inc/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "body-of-sound",
@@ -310,7 +327,8 @@ window.PROJECTS = [
     "summary": "Body of Sound offers holistic healing through sound therapy to restore balance and wellness.",
     "featured": false,
     "url": "projects/wordpress/body-of-sound/index.html",
-    "thumb": "projects/wordpress/body-of-sound/thumbnail.svg"
+    "thumb": "projects/wordpress/body-of-sound/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "verso-logistics",
@@ -326,7 +344,8 @@ window.PROJECTS = [
     "summary": "Verso Logistics provides efficient supply chain and transportation solutions to streamline your business.",
     "featured": false,
     "url": "projects/wordpress/verso-logistics/index.html",
-    "thumb": "projects/wordpress/verso-logistics/thumbnail.svg"
+    "thumb": "projects/wordpress/verso-logistics/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "fix-your-thyroid",
@@ -342,7 +361,8 @@ window.PROJECTS = [
     "summary": "Fix Your Thyroid offers expert guidance and resources to support thyroid health and wellness.",
     "featured": false,
     "url": "projects/wordpress/fix-your-thyroid/index.html",
-    "thumb": "projects/wordpress/fix-your-thyroid/thumbnail.svg"
+    "thumb": "projects/wordpress/fix-your-thyroid/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "911-wildlife",
@@ -358,7 +378,8 @@ window.PROJECTS = [
     "summary": "911 Wildlife provides emergency wildlife removal and humane animal control services with care.",
     "featured": false,
     "url": "projects/wordpress/911-wildlife/index.html",
-    "thumb": "projects/wordpress/911-wildlife/thumbnail.svg"
+    "thumb": "projects/wordpress/911-wildlife/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "justin-health",
@@ -374,7 +395,8 @@ window.PROJECTS = [
     "summary": "Justin Health offers holistic health advice and natural wellness solutions to improve your life.",
     "featured": false,
     "url": "projects/wordpress/justin-health/index.html",
-    "thumb": "projects/wordpress/justin-health/thumbnail.svg"
+    "thumb": "projects/wordpress/justin-health/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "shipthrough",
@@ -390,7 +412,8 @@ window.PROJECTS = [
     "summary": "ShipThrough offers smart logistics solutions to optimize shipping, tracking, and supply chain management.",
     "featured": false,
     "url": "projects/wordpress/shipthrough/index.html",
-    "thumb": "projects/wordpress/shipthrough/thumbnail.svg"
+    "thumb": "projects/wordpress/shipthrough/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "life-empowered",
@@ -406,7 +429,8 @@ window.PROJECTS = [
     "summary": "Life Empowered provides coaching and tools to help you achieve personal growth and success.",
     "featured": false,
     "url": "projects/wordpress/life-empowered/index.html",
-    "thumb": "projects/wordpress/life-empowered/thumbnail.svg"
+    "thumb": "projects/wordpress/life-empowered/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "cameras-dallas",
@@ -422,7 +446,8 @@ window.PROJECTS = [
     "summary": "Cameras Dallas offers a wide selection of photography equipment and expert camera services.",
     "featured": false,
     "url": "projects/wordpress/cameras-dallas/index.html",
-    "thumb": "projects/wordpress/cameras-dallas/thumbnail.svg"
+    "thumb": "projects/wordpress/cameras-dallas/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "optimal-living-institute-idaho",
@@ -438,7 +463,8 @@ window.PROJECTS = [
     "summary": "Optimal Living Institute Idaho provides wellness programs and coaching for balanced, healthy living.",
     "featured": false,
     "url": "projects/wordpress/optimal-living-institute-idaho/index.html",
-    "thumb": "projects/wordpress/optimal-living-institute-idaho/thumbnail.svg"
+    "thumb": "projects/wordpress/optimal-living-institute-idaho/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "global-now-it",
@@ -454,7 +480,8 @@ window.PROJECTS = [
     "summary": "Global Now IT delivers expert IT services and solutions to accelerate business growth.",
     "featured": false,
     "url": "projects/wordpress/global-now-it/index.html",
-    "thumb": "projects/wordpress/global-now-it/thumbnail.svg"
+    "thumb": "projects/wordpress/global-now-it/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "health-beyond-wellness",
@@ -470,7 +497,8 @@ window.PROJECTS = [
     "summary": "Health Beyond Wellness offers personalized health coaching and holistic care for lasting vitality.",
     "featured": false,
     "url": "projects/wordpress/health-beyond-wellness/index.html",
-    "thumb": "projects/wordpress/health-beyond-wellness/thumbnail.svg"
+    "thumb": "projects/wordpress/health-beyond-wellness/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "natural-nutritional-solutions",
@@ -486,7 +514,8 @@ window.PROJECTS = [
     "summary": "Natural Nutritional Solutions provides quality supplements and guidance for healthier, balanced living.",
     "featured": false,
     "url": "projects/wordpress/natural-nutritional-solutions/index.html",
-    "thumb": "projects/wordpress/natural-nutritional-solutions/thumbnail.svg"
+    "thumb": "projects/wordpress/natural-nutritional-solutions/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "crowneshop",
@@ -503,7 +532,8 @@ window.PROJECTS = [
     "summary": "Crowneshop offers genuine motorcycle parts and accessories across Pakistan with quality and fast delivery.",
     "featured": false,
     "url": "projects/shopify/crowneshop/index.html",
-    "thumb": "projects/shopify/crowneshop/thumbnail.svg"
+    "thumb": "projects/shopify/crowneshop/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "coco-labon-kids",
@@ -520,7 +550,8 @@ window.PROJECTS = [
     "summary": "Coco LaBon Kids is an online store offering fun, high-quality products for kids, including clothing, accessories, and toys.",
     "featured": false,
     "url": "projects/shopify/coco-labon-kids/index.html",
-    "thumb": "projects/shopify/coco-labon-kids/thumbnail.svg"
+    "thumb": "projects/shopify/coco-labon-kids/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "shop-mavrik",
@@ -537,7 +568,8 @@ window.PROJECTS = [
     "summary": "ShopMavrik.com offers portable tent saunas and accessories for convenient outdoor relaxation and wellness.",
     "featured": false,
     "url": "projects/shopify/shop-mavrik/index.html",
-    "thumb": "projects/shopify/shop-mavrik/thumbnail.svg"
+    "thumb": "projects/shopify/shop-mavrik/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "uniforms-warehouse",
@@ -554,7 +586,8 @@ window.PROJECTS = [
     "summary": "Uniforms Warehouse supplies quality uniforms and gear for security and law enforcement across North America.",
     "featured": false,
     "url": "projects/shopify/uniforms-warehouse/index.html",
-    "thumb": "projects/shopify/uniforms-warehouse/thumbnail.svg"
+    "thumb": "projects/shopify/uniforms-warehouse/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "businesspal",
@@ -571,7 +604,8 @@ window.PROJECTS = [
     "summary": "BusinessPal is a UAE-based multi-vendor marketplace connecting sellers and buyers across diverse categories.",
     "featured": false,
     "url": "projects/laravel/businesspal/index.html",
-    "thumb": "projects/laravel/businesspal/thumbnail.svg"
+    "thumb": "projects/laravel/businesspal/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "i-got-the-spot",
@@ -588,7 +622,8 @@ window.PROJECTS = [
     "summary": "I Got The Spot is a multi-vendor e-commerce platform empowering small businesses to sell products online.",
     "featured": false,
     "url": "projects/laravel/i-got-the-spot/index.html",
-    "thumb": "projects/laravel/i-got-the-spot/thumbnail.svg"
+    "thumb": "projects/laravel/i-got-the-spot/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "taj-saha",
@@ -604,7 +639,8 @@ window.PROJECTS = [
     "summary": "Taja Saha is a digital health platform supporting chronic condition management in the Arab world with tailored resources.",
     "featured": false,
     "url": "projects/react/taj-saha/index.html",
-    "thumb": "projects/react/taj-saha/thumbnail.svg"
+    "thumb": "projects/react/taj-saha/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "hr-portal",
@@ -622,7 +658,8 @@ window.PROJECTS = [
     "summary": "HR system with payroll, leave management, attendance and employee self-service.",
     "featured": true,
     "url": "projects/aspnet/hr-portal/index.html",
-    "thumb": "projects/aspnet/hr-portal/thumbnail.svg"
+    "thumb": "projects/aspnet/hr-portal/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "inventory-api",
@@ -640,7 +677,8 @@ window.PROJECTS = [
     "summary": "Inventory and POS API with JWT auth, Swagger docs and background jobs.",
     "featured": false,
     "url": "projects/aspnet/inventory-api/index.html",
-    "thumb": "projects/aspnet/inventory-api/thumbnail.svg"
+    "thumb": "projects/aspnet/inventory-api/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "erp-frontend",
@@ -658,7 +696,8 @@ window.PROJECTS = [
     "summary": "Modular ERP frontend with lazy-loaded modules, NgRx store and role-based UI.",
     "featured": true,
     "url": "projects/angular/erp-frontend/index.html",
-    "thumb": "projects/angular/erp-frontend/thumbnail.svg"
+    "thumb": "projects/angular/erp-frontend/thumbnail.svg",
+    "logo": null
   },
   {
     "slug": "booking-app",
@@ -676,6 +715,7 @@ window.PROJECTS = [
     "summary": "PWA booking app with realtime availability and push notifications.",
     "featured": false,
     "url": "projects/angular/booking-app/index.html",
-    "thumb": "projects/angular/booking-app/thumbnail.svg"
+    "thumb": "projects/angular/booking-app/thumbnail.svg",
+    "logo": null
   }
 ];
